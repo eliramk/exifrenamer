@@ -121,6 +121,8 @@ def get_timestamp(filepath):
         return str(tags['EXIF DateTimeOriginal'])
     elif 'EXIF DateTimeDigitized' in tags:
         return str(tags['EXIF DateTimeDigitized'])
+    elif 'Image DateTime' in tags:
+        return str(tags['Image DateTime'])
     else:
         raise MissingTimestampError
 
